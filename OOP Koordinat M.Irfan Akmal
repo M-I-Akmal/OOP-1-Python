@@ -1,0 +1,51 @@
+# Syntax OOP Koordinat
+class CTitik:
+    # ucapan selamat datang
+    def _init_(self):
+        print("Selamat Datang di Program OOP Penjumlahan Dua Titik Pada Koordinat Kartesius M.I.A")
+        print("___________________________________________________________________________________\n")
+
+    # Method Input Titik
+    def masukan(self):
+        # Input Objek 1
+        print("Silakan Masukkan Koordinat Posisi untuk Objek 1")
+        x1 = (input("Masukkan Koordinat Objek pada Sumbu X= "))
+        y1 = (input("Masukkan Koordinat Objek pada Sumbu Y= "))
+
+        self.Titik1 = [] #Himpunan kosong untuk koordinat titik 1
+        self.Titik1.append(x1)# Penambahan titik X1 ke list koordinat
+        self.Titik1.append(y1)# Penambahan titik Y1 ke list koordinat
+
+        # Input Objek 2
+        print("Silakan Masukkan Koordinat Posisi untuk Objek 2")
+        x2 = (input("Masukkan Koordinat Objek pada Sumbu X= "))
+        y2 = (input("Masukkan Koordinat Objek pada Sumbu Y= "))
+
+        self.Titik2 = []  # Himpunan kosong untuk koordinat titik 2
+        self.Titik2.append(x2)  # Penambahan titik X2 ke list koordinat
+        self.Titik2.append(y2)  # Penambahan titik Y2 ke list koordinat
+        print("\n")
+
+    # Detail Titik Input
+        print("==========Detail Objek 1 & 2==========")
+    def siapa(self):
+        print("Posisiku Objek 1 adalah (X,Y) =", self.Titik1)
+        print("Posisiku Objek 2 adalah (X,Y) =", self.Titik2)
+
+    # Method Penjumlahan kedua titik
+    def penjumlahan(self):
+        Titik_Objek_3 = []
+
+        X = int(self.Titik1 [0]) + int(self.Titik2 [0])
+        Y = int(self.Titik1 [1]) + int(self.Titik2 [1])
+
+        Titik_Objek_3.append(X)
+        Titik_Objek_3.append(Y)
+        print(f"Titik Objek 3 Berada Pada Koordinat (X,Y) = {Titik_Objek_3}\n")
+        print("==========Selesai==========")
+
+ttk = CTitik()
+ttk._init_()
+ttk.masukan()
+ttk.siapa()
+ttk.penjumlahan()
